@@ -1,0 +1,74 @@
+<template>
+    <div class="slds-card slds-p-around_x-small">
+        <div class="header">
+            <div class="color"></div>
+            <img src={studentPicture} alt="Profile photo" class="picture" />
+            <div class="details">
+                <fieldset class="slds-form-element slds-form-element_compound">
+                    <legend
+                        class="slds-form-element__legend slds-form-element__label"
+                    >
+                        Learner Profile
+                    </legend>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__row">
+                            <div class="slds-size_1-of-3">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"
+                                        >Degree Program</label
+                                    >
+                                    <div class="slds-form-element__control">
+                                        <p class="slds-form-element__static">
+                                            {programName}
+                                        </p>
+                                    </div>
+                                    <hr
+                                        style="margin-top: 0px;margin-right: 10px;"
+                                    >
+                                </div>
+                            </div>
+                            <div class="slds-size_1-of-3">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"
+                                        >Major</label
+                                    >
+                                    <div class="slds-form-element__control">
+                                        <p class="slds-form-element__static">
+                                            {majorName}
+                                        </p>
+                                    </div>
+                                    <hr
+                                        style="margin-top: 0px;margin-right: 10px;"
+                                    >
+                                </div>
+                            </div>
+                            <div class="slds-size_1-of-3">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label"
+                                        >Enrollment Date</label
+                                    >
+                                    <div class="slds-form-element__control">
+                                        <p class="slds-form-element__static">
+                                            {enrollDate}
+                                        </p>
+                                    </div>
+                                    <hr
+                                        style="margin-top: 0px;margin-right: 10px;"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="slds-m-top_medium slds-p-around_medium">
+            <lightning-record-form
+                object-api-name="Contact"
+                record-id={recordId}
+                layout-type="Compact"
+                columns="2"
+            ></lightning-record-form>
+        </div>
+    </div>
+</template>
